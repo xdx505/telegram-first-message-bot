@@ -1,0 +1,16 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+bot:
+  username: ${BOT_USERNAME}
+  token: ${BOT_TOKEN}
+  path: "https://${SERVER_HOST}:${SERVER_PORT}/${BOT_TOKEN}"
+  drop-updates: false
+resource:
+  commands:
+    name: .\src\main\resources\assets\commands\commands
+    locales:
+      - en
+      - ru
+  messages:
+    name: .\src\main\resources\assets\messages\messages

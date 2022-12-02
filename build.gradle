@@ -1,0 +1,24 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.1'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group 'ru.xdx505'
+version '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    telegram = "6.3.0"
+    lombok = "1.18.24"
+}
+
+dependencies {
+    compileOnly "org.projectlombok:lombok:$lombok"
+    annotationProcessor "org.projectlombok:lombok:$lombok"
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation "org.telegram:telegrambots-spring-boot-starter:$telegram"
+}
